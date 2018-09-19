@@ -1,12 +1,13 @@
 //Load libs
+const hbs = require('express-handlebars');
 const path = require('path');
 const express = require('express');
 const asciify = require('asciify-image');
 
 var options = {
     fit: 'box',
-    width: 100,
-    height: 50
+    width: 200,
+    height: 100
 }
 
 
@@ -24,6 +25,12 @@ const randImage = (array) => {
 
 //Create an instance of Express
 const app = express();
+
+//configure express to use handlebars as the rendering engine
+app.engine('hbs', hbs());
+app.set('view engine', 'hbs');
+app.set('views',path.join(__dirname,'my-views'));
+
 
 //Define our routes
 // GET /image -> text/html
