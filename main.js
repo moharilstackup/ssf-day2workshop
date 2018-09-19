@@ -3,7 +3,8 @@ const path = require('path');
 const express = require('express');
 
 const resources = [ 'images', 'public' ];
-const images = [ 'bear.jpg', 'cat.jpg', 'dog.jpg' ]
+// const images = [ 'bear.jpg', 'cat.jpg', 'dog.jpg','th8.png','th9.png','th10.png', 'th11.png','th12.png' ];
+const images = [ 'th7.png','th8.png','th9.png','th10.png', 'th11.png','th12.png' ]
 
 const randImage = (array) => {
     const rand = Math.random();
